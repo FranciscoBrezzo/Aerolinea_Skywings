@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>392</y>
+      <w>144</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>Vuelo
+-
+-modelo_avion: String
+-aerolinea: String
+-status: String
+-origen: String
+-destino: String
+-fecha_partida: datetime
+-fecha_llegada: datetime
+-puerta_embarque: int
+-boletos_vendidos: int
+-ubicacion: Ubicacion
+-
++registar_vuelo()
++calc_hora_llegada()
++vuelos_encurso()
++cant_embarcados()
++generar_informe()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>344</x>
+      <y>280</y>
+      <w>104</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Boleto
+-
+-vuelo: Vuelo
+-nro_asiento: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>104</y>
+      <w>152</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Pasajero
+-
+-nombre: String
+-apellido: String
+-nro_pasaporte: int
+-boleto: Boleto
+-equipaje: Equipaje
+-
++registar_pasajero()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>320</y>
+      <w>184</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;90.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>144</y>
+      <w>88</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;170.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>144</y>
+      <w>96</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>90.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>280</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Equipaje
+-
+-peso: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>424</y>
+      <w>128</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Ubicacion
+-
+-nombre: String
+-
++actualizar_ubicacion()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>320</y>
+      <w>136</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>424</y>
+      <w>608</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>740.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>152</x>
+      <y>120</y>
+      <w>240</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Los metodos set() y get() de las tablas son 
+extendidos a todas las tablas existentes
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
